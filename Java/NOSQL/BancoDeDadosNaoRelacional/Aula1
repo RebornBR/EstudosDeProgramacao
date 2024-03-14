@@ -1,0 +1,58 @@
+
+// JSON NÃO ACEITA COMENTÁRIOS
+// Cração JSON, todo documento inicia e fecha com chaves {} 
+// para criação de valores o padrão segue:
+// "nome_campo" : "valor_campo", 
+// utilzamos a virgula, quando vamos inserir mais campos 
+
+
+{   // USUÁRIO
+    "_id": "",
+    "nome": "nome",
+    "data_nascimento": "1990-10-05",
+    "email": "borges@gmail.com",
+    "endereco": "Av Manoel Marques de Jesus, 380 - Vila Xavier, Araraquara/SP"
+}
+
+////////////////////////////////////
+{   
+    "_id": "",
+    "nome": "nome",
+    "data_nascimento": "1990-10-05",
+    "email": "borges@gmail.com",
+    "endereco": { // CRIAÇÃO DE UM DOCUMENTO ANINHADO QUE PERTENCE AO endereco
+        "rua": "Av Manoel",
+        "numero": 123,
+        "cidade": "Araraquara",
+        "estado": "SP"
+    }
+}
+
+/////////////////////////////////
+{   
+    "_id": "",
+    "nome": "nome",
+    "data_nascimento": "1990-10-05",
+    "email": "borges@gmail.com",
+    "enderecos": [ // CRIAÇÃO DE UMA LISTA(ARRAY) DE DOCUMENTOS ANINHADOS que pertence ao endereco
+        {
+        "rua": "Av Manoel",
+        "numero": 123,
+        "cidade": "Araraquara",
+        "estado": "SP"
+        },
+        {
+        "rua": "Av Do estado",
+        "numero": 123,
+        "cidade": "Araraquara",
+        "estado": "SP"
+        },
+    ]
+}
+
+//////////////////////////////////
+{//DESTINO
+    "_id": "",
+    "nome": "nome destino",
+    "descricao": "Descricao do destino"
+}

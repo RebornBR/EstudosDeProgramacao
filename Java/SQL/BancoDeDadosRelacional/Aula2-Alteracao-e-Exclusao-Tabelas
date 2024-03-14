@@ -1,0 +1,39 @@
+
+-- CREATE TABLE usuarios (
+--'VARCHAR, INT, DATE' são os tipos
+-- o 255 e 50 do VARCHAR é o tamanho máximo da caracteres
+
+--  id INT,
+--  nome VARCHAR(255) NOT NULL COMMENT 'Nome do usuário', -- NÃO PODE SER NULO
+--  email VARCHAR(255) NOT NULL UNIQUE COMMENT 'Endereço de e-mail do usuário', -- NÃO PODE SER NULO E É UNICO, OU SEJA, NÃO PODE HAVER OUTRO ATRIBUTO IGUAL.
+--  data_nascimento DATE NOT NULL COMMENT 'Data de nascimento do usuário', -- "NÃO PODE SER NULO "
+--  endereco VARCHAR(50) NOT NULL COMMENT 'Endereço do Cliente E b' --'Não pode ser NULO(NOT NULL)'
+-- );
+
+-- Tabela usuarios criada no nosso banco de dados viagens 
+
+
+-- Criando nova tabela --
+
+CREATE TABLE usuarios_nova ( -- estamos criando uma nova tabela, que tem os mesmos nomes e tipos de coluna da nossa tabela anterior usuarios
+  id INT,
+  nome VARCHAR(255) NOT NULL COMMENT 'Nome do usuário',
+  email VARCHAR(255) NOT NULL UNIQUE COMMENT 'Endereço de e-mail do usuário',
+  data_nascimento DATE NOT NULL COMMENT 'Data de nascimento do usuário',
+  endereco VARCHAR(70) NOT NULL COMMENT 'Endereço do Cliente'
+);
+
+-- Migrando os dados --
+
+INSERT INTO usuarios_nova 
+SELECT * FROM usuarios; -- estamos inserindo na tabela usuarios_nova todos os dados da tabela usuarios
+
+-- Excluindo tabela anterior --
+DROP TABLE usuarios; -- comando apaga a tabela usuarios
+
+-- Renomeando nova tabela --
+ALTER TABLE usuarios_nova RENAME usuarios; -- comando altera a tabela usuarios_nova RENAME(RENOMEIA) seu nome para usuarios
+
+
+-- Ou opção 2 : Alterar tamanho da coluna endereço -- 
+ALTER TABLE usuarios MODIFY COLUMN endereco VARCHAR(100); -- estamos alterando na tabela agora renomeada como usuarios MODIFY COLUMN(MODIFICANDO) SUA COLUNA endereco para VARCHAR que tem um tamanho máximo de 100

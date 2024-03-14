@@ -1,0 +1,113 @@
+CREATE TABLE usuarios (
+  --'VARCHAR, INT, DATE' são os tipos
+  -- o 255 e 50 do VARCHAR é o tamanho máximo da caracteres
+
+  id INT,
+  nome VARCHAR(255) NOT NULL COMMENT 'Nome do usuário', -- NÃO PODE SER NULO
+  email VARCHAR(255) NOT NULL UNIQUE COMMENT 'Endereço de e-mail do usuário', -- NÃO PODE SER NULO E É UNICO, OU SEJA, NÃO PODE HAVER OUTRO ATRIBUTO IGUAL.
+  data_nascimento DATE NOT NULL COMMENT 'Data de nascimento do usuário', -- "NÃO PODE SER NULO "
+  endereco VARCHAR(50) NOT NULL COMMENT 'Endereço do Cliente E b' --'Não pode ser NULO(NOT NULL)'
+); 
+-- não precisamos usar o viagens. , mas precisamos nos certificar que estamos na sua área, para a criação de uma tabela, portanto é recomendavel sempre colocar/indicar o seu banco de dados que será criada a tabela
+CREATE TABLE viagens.destinos ( -- 'viagens é nosso banco de dados' 'destinos é o nome da nossa outra tabela' 
+  id INT,
+  nome VARCHAR(255) NOT NULL UNIQUE COMMENT 'Nome do destino',
+  descricao VARCHAR(255) NOT NULL COMMENT 'Descrição do destino'
+);
+
+CREATE TABLE viagens.reservas ( -- 'viagens é nosso banco de dados' reservas é o nome da nossa nova tabela
+  id INT COMMENT 'Identificador único da reserva',
+  id_usuario INT COMMENT 'Referência ao ID do usuário que fez a reserva',
+  id_destino INT COMMENT 'Referência ao ID do destino da reserva',
+  data DATE COMMENT 'Data da reserva',
+  status VARCHAR(255) DEFAULT 'pendente' COMMENT 'Status da reserva (confirmada, pendente, cancelada, etc.)' -- Estabele o valor padrão(default) como 'pendente', ou seja, sempre que criarmos uma reserva seu status inicialmente será pendente
+);
+
+-- Inserts --
+INSERT INTO 
+  viagens.usuarios (id, nome, email, data_nascimento, endereco) -- INSERT INTO, estamos inserindo/criando dados no nosso banco de dados viagens na tabela usuario e os dados serão inseridos nas suas colunas id, nome, email, data_nascimento, endereço 
+VALUES -- abaixo colocamos os valores, de acordo com seus tipos e ordem das colunas
+(1, 'João Silva', 'joao@example.com', '1990-05-15', 'Rua A, 123, Cidade X, Estado Y'),
+(2, 'Maria Santos', 'maria@example.com', '1985-08-22', 'Rua B, 456, Cidade Y, Estado Z'),
+(3, 'Pedro Souza', 'pedro@example.com', '1998-02-10', 'Avenida C, 789, Cidade X, Estado Y');
+
+INSERT INTO 
+  viagens.destinos (id, nome, descricao) -- INSERT INTO, estamos inserindo/criando dados no nosso banco de dados viagens na tabela destinos e os dados serão inseridos nas suas colunas id, nome, descrição
+VALUES -- abaixo colocamos os valores, de acordo com seus tipos e ordem das colunas
+  (1, 'Praia das Tartarugas', 'Uma bela praia com areias brancas e mar cristalino'),
+  (2, 'Cachoeira do Vale Verde', 'Uma cachoeira exuberante cercada por natureza'),
+  (3, 'Cidade Histórica de Pedra Alta', 'Uma cidade rica em história e arquitetura');
+
+INSERT INTO 
+  viagens.reservas (id, id_usuario, id_destino, data, status) -- INSERT INTO, estamos inserindo/criando dados no nosso banco de dados viagens na tabela reservas e os dados serão inseridos nas suas colunas id, id_usuário, id_destino, data, status
+VALUES -- abaixo colocamos os valores, de acordo com seus tipos e ordem das colunas
+  (1, 1, 2, '2023-07-10', 'confirmada'),
+  (2, 2, 1, '2023-08-05', 'pendente'),
+  (3, 3, 3, '2023-09-20', 'cancelada');
+
+-- Selects --
+
+-- Selecionar todos os registros da tabela "usuarios"
+SELECT 
+  *
+FROM 
+  usuarios; -- retorna tudo da tabela usuarios
+
+
+-- Selecionar apenas o nome e o email dos usuários
+SELECT 
+  nome, 
+  email 
+FROM
+  usuarios; -- retorna apenas os dados das colunas nome e email da tabela usuarios
+
+
+-- Selecionar os usuários que possuem o nome "João Silva"
+SELECT
+   * 
+ FROM 
+  usuarios 
+ WHERE --QUANDO
+  nome = 'João Silva'; -- vai retornar tudo da tabela usuarios, que tiver o nome igual a João Silva
+
+
+-- Selecionar os usuários que nasceram antes de uma determinada data
+SELECT
+  * 
+FROM 
+  usuarios
+WHERE --QUANDO
+  data_nascimento < '1990-01-01'; -- retorna tudo da tabela usuarios, que tiver a data_nascimento menor que 1990-01-01
+
+
+-- Like 
+SELECT 
+  * 
+FROM 
+  usuarios
+WHERE --QUANDO
+  nome LIKE '%Silva%'; -- retorna tudo da tabela usuarios, que tenha Silva no nome, pois tem % na esquerda e na direita, então não importa o que venha antes ou depois de Silva, basta apenas ter Silva, que será retornado
+
+
+SELECT
+  * 
+FROM
+  usuarios 
+ WHERE --QUANDO
+  nome LIKE 'João%'; -- retorna tudo da tabela usuarios, que tenha João no nome. João tem ser o primeiro nome os posteriores sobrenomes, no sentido onde se encontra a '%'(direita) não importa, se tiver algo antes de João, por exemplo, Pedro João dos Santos, não retornará
+
+
+-- Update --
+UPDATE
+  usuarios 
+SET -- alteração de dados. quais campos serão alterados e seus novos valores
+  endereco = 'Nova Rua, 123' 
+WHERE --QUANDO
+  email = 'joao@example.com'; -- UPDATE(atualizamos) na tabela usuarios o endereco atualizado se chamará Nova rua, 123. essa atualização/alteração sera feita, quando o email for igual a joao@example.com
+
+
+-- delete --
+DELETE FROM 
+  reservas 
+WHERE --QUANDO
+  status = 'cancelada'; -- deleta tudo da tabela reservas que tiver o status cancelada

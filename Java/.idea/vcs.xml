@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JAVA-API-Collections/src/main/java/StreamAPI/ganhando_produtividade_com_Stream_API_Java" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JUnit/junit5-exemplos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBoot/dio-springboot" vcs="Git" />
+  </component>
+</project>

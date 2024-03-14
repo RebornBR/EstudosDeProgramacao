@@ -1,0 +1,37 @@
+header {
+    background-color: lightblue;
+    color: white;
+
+}
+
+body{
+    background-color: indigo;
+    color: white;
+}
+h1{
+    color: rgb(179, 255, 0);
+}
+p {
+
+    color: darkgray;
+
+}
+
+footer {
+    background-color: gray;
+    color: white;
+
+}
+
+a{
+    color: chocolate;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border-radius: 0vmax;
+    padding: 1%;
+    font-weight: 100;
+
+}

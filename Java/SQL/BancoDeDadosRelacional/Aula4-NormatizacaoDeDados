@@ -1,0 +1,28 @@
+
+-- Primeira forma normal (1FN)
+-- Devemos fazer esse passo logo no incio da nossa criação das tabelas e suas colunas
+-- nesse caso estamos desmenbrando a coluna endereço em rua, cidade, numero, estado, mas poderiamos ter feito isso, logo no inicio.
+-- isso facilita a procura e evita que o usuário faça a inserção dessas informações de forma que dificulte ou torne impossivel procurar informações
+
+-- Adicionar colunas de endereço à tabela "usuarios"
+ALTER TABLE usuarios
+ADD rua VARCHAR(100),
+ADD numero VARCHAR(10),
+ADD cidade VARCHAR(50),
+ADD estado VARCHAR(50); -- adicionando 
+
+-- Copia os dados da tabela original para a nova tabela
+
+-- exemplo (3, 'Pedro Souza', 'pedro@example.com', '1998-02-10', 'Avenida C, 789, Cidade X, Estado Y');
+-- como podemos ver nosso endereço 'Avenida C, 789, Cidade X, Estado Y' tem 4 partes e estão separados por virgula, cada parte representa 
+-- um index e os podemos utilizar para inserir essas informações nas respectivas colunas com o comando SUBSTRING_INDEX
+-- o index inicia no 0 e vai até o tamanho - 1
+UPDATE usuarios
+SET rua = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco, ',', 1), ',', -1),
+    numero = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco, ',', 2), ',', -1),
+    cidade = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco, ',', 3), ',', -1),
+    estado = SUBSTRING_INDEX(endereco, ',', -1);
+
+-- Exclusão da coluna "endereco" da tabela original
+ALTER TABLE usuarios
+DROP COLUMN endereco;

@@ -1,0 +1,47 @@
+SELECT COUNT(*) FROM usuarios; -- conta quantos usarios existem na tabela usuarios
+
+-- Media da idade dos usuarios
+
+-- função TIMESTAMPDIFF(CRITÉRIO, VALOR A SER FEITA A COMPARAÇÃO DE DIFERENÇA, DATA ATUAL), basicamente verifica a diferença de anos(years) da nossa data_nascimento em comparação com nossa data atual(CURRENT_DATE), EM OUTRAS PALAVRAS, subtrai data atuaL(CURRENT_DATE) de data_nascimento
+
+SELECT AVG(TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_DATE())) AS media_idade -- retorna apenas a média(AVG) do TIMESTAMPDIFF da tabela usuarios, o resultado será salvo numa coluna chamada idade
+FROM usuarios;
+
+-- Soma da idade dos usuarios
+SELECT SUM(TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_DATE())) AS soma_idade -- retorna apenas a soma(SUM) do TIMESTAMPDIFF da tabela usuarios, o resultado será salvo numa coluna chamada soma_idade
+FROM usuarios;
+
+-- Menor Idade
+SELECT MIN(TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_DATE())) AS menor_idade -- retorna apenas o minimo(MIN) do TIMESTAMPDIFF da tabela usuarios, o resultado será salvo numa coluna chamada menor_idade
+FROM usuarios;
+
+-- Maior Idade
+SELECT MAX(TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_DATE())) AS maior_idade -- retorna apenas o máximo do TIMESTAMPDIFF da tabela usuarios, o resultado será salvo numa coluna chamada maior_idade
+FROM usuarios;
+
+-- subconsulta
+SELECT * , (SELECT (TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_DATE()))) AS idade FROM usuarios -- retorna tudo da tabela usuarios, mas tambem retorna o TIMESTAMPDIFF(O ANO ATUAL(CURRENT_DATE) menos data_nascimento que é a idade do usuario ), armazenaremos o resultado em um coluna chamada idade, ou seja, retornará
+-- a idade de todo usuario na tabela usuarios
+
+
+-- Calcula quantidade de reservas por destino --
+SELECT *, COUNT(*) AS total_reservas FROM reservas GROUP BY id_destino ; -- retorna todos dados da tabela reservas e fará a CONTAGEM(COUNT) de reservas que são agrupadas por id_destino, ou seja, contará quantas reservas existem por destino(id_destino) e esse resultado será salvo em total_reservas
+
+
+-- Limit
+SELECT *, COUNT(*) AS total_reservas FROM reservas GROUP BY id_destino LIMIT 1; -- retorna apenas(limit 1) um dos dados da tabela reservas e fará a CONTAGEM(COUNT) de reservas que são agrupadas por id_destino, ou seja, contará quantas reservas existem por destino(id_destino) e esse resultado será salvo em total_reservas
+SELECT *, COUNT(*) AS total_reservas FROM reservas GROUP BY id_destino LIMIT 1 OFFSET 2;
+
+
+-- Ordenação
+SELECT nome
+FROM usuarios
+ORDER BY nome; -- ordena por nome
+
+SELECT nome, data_nascimento
+FROM usuarios
+ORDER BY data_nascimento, nome; -- ordena por data_nascimento e nome
+
+SELECT nome, data_nascimento
+FROM usuarios
+ORDER BY data_nascimento, nome DESC; -- ordena por data_nascimento e por nome DESC(descendente)

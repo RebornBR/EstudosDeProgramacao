@@ -1,0 +1,74 @@
+-- Primary Key--
+-- CASO ESTEJA CRIANDO UMA TABELA PARA ADICIONAR CHAVE PRIMÁRIA
+-- AUTOINCLEMENT DEIXA O BANCO RESPONSÁVEL PELA GERAÇAO DAS CHAVES PRIMÁRIAS, EM OUTRAS PALAVRAS, NÃO PRECISAMOS MANUALMENTE DIZER QUAL É O VALOR A SER INSERIDO NA COLUNA QUE É UM AUTOINCREMENT, ISSO SERÁ FEITO AUTOMATICAMENTE
+-- NOMECOLUNA PRIMARY KEY TIPO, 
+-- PRIMARY KEY É UMA CONSTRAINT
+
+-- Tabela "usuarios"
+ALTER TABLE usuarios
+MODIFY COLUMN id INT AUTO_INCREMENT, -- alterando na tabela usuarios e modificando na coluna(id) que é um INT AUTO_INCREMENT 
+ADD PRIMARY KEY (id); -- ae estamos adicionando uma chave primaria que será a coluna id
+
+-- Tabela "destinos"
+ALTER TABLE destinos
+MODIFY COLUMN id INT AUTO_INCREMENT,
+ADD PRIMARY KEY (id); -- adiciona chave primária
+
+-- Tabela "reservas"
+ALTER TABLE reservas
+MODIFY COLUMN id INT AUTO_INCREMENT,
+ADD PRIMARY KEY (id); -- adiciona chave primária
+
+-- Exemplos --
+
+-- Inserção na tabela "usuarios"
+INSERT INTO 
+usuarios (nome, email, data_nascimento, endereco)
+VALUES 
+('João Maria', 'joaomaria@example.com', '1990-01-01', 'Rua A, 123');
+
+-- Chaves estrangeiras --
+
+-- Adicionando chave estrangeira na tabela "reservas" referenciando a tabela "usuarios"
+ALTER TABLE reservas -- alterando tabela reservas 
+ADD CONSTRAINT fk_reservas_usuarios -- nome da nossa chave estrangeira 
+FOREIGN KEY (id_usuario) REFERENCES usuarios(id); -- a nossa coluna que será a referencia da chave primária, nesse caso, id_usuario, que referencia a coluna id da tabela usuarios
+
+-- Adicionando chave estrangeira na tabela "reservas" referenciando a tabela "destinos"
+ALTER TABLE reservas
+ADD CONSTRAINT fk_reservas_destinos -- nome da nossa chave estrangeira 
+FOREIGN KEY (id_destino) REFERENCES destinos(id); -- a nossa coluna que será a referencia da chave primária, nesse caso, id_destino, que referencia a coluna id da tabela destinos
+
+--apagando FOREIGN KEY
+ALTER TABLE reservas
+DROP FOREIGN KEY fk_reservas_usuarios; -- deleta, apaga a FOREIGN KEY
+
+
+-- Alterando a restrição da chave estrangeira "fk_reservas_usuarios" na tabela "reservas" para ON DELETE CASCADE
+ALTER TABLE reservas
+ADD CONSTRAINT fk_reservas_usuarios
+FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+ON DELETE CASCADE; -- diz que quando excluirmos um registro primário, a chave primária a qual nossa chave estrangeira faz referência. também será exlcuidos seus filhos(chaves secundárias)
+-- EXEMPLO
+-- DELECT FROM USUARIOS WHERE id = 1; quando deletarmos nosso usuário com id 1, sua reserva também será excluida.
+
+
+-------------------------------- não preciamos colocar o id, pois ele agora é autoincrement --------------------------------
+
+-- Inserção na tabela "usuarios"
+INSERT INTO 
+usuarios (nome, email, data_nascimento, endereco)
+VALUES 
+('João Maria', 'joaomaria@example.com', '1990-01-01', 'Rua A, 123');
+
+-- Inserção na tabela "destinos"
+INSERT INTO
+destinos (nome, descricao)
+VALUES 
+('Praia Teste', 'Destino paradisíaco com belas praias.');
+
+-- Inserção na tabela "reservas"
+INSERT INTO -- ao tentarmos criar uma reserva, se inserimos id_usuario e id_destino que não existam na tabela usuarios e na tabela destino, essa reserva não será realizada
+reservas (id_usuario, id_destino, data, status)
+VALUES 
+(4, 4, '2023-07-01', 'pendente');

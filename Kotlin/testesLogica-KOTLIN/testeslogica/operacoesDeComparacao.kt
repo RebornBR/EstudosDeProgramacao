@@ -1,0 +1,40 @@
+package com.example.testeslogica
+
+fun main(){
+    println("Digite o valor para A:")
+    val a:Int = input.nextInt()
+    println("digite o valor para B:")
+    val b:Int = input.nextInt()
+    println("Digite o valor para C:")
+    val c:Int = input.nextInt()
+    var d= a > 3
+    println("A= $a, B= $b e C= $c")
+    println("A é menor que 2 ?")
+    println(a<2)
+    println("B - A é menor que 0 ?")
+    println(b-a<0)
+    println("2xB - 4xA é maior ou igual 0?")
+    println(2*b - 4*a >= 0)
+    println("3xB é igualmente 2xC ?")
+    println(3*b == 2*c)
+    println("C é diferente de 1 + A ?")
+    println(c != 1+a)
+    println("O resto da divisão de 6 por 3 é maior que 0 ?")
+    println(6%3 > 0) // 6%3, faz a divisão e verifica se o resto da divisão é maior que 0
+    println("O resto da divisão de C por 2 é menor ou igual a 1 ?")
+    println(c%2 <= 1)  // c%2,  faz a divisão e verifica se o resto da divisão é menor ou igual a 1
+    println("D é o resultado de, A é maior que 3, então D é ? ?")
+    println(d)
+    println("---------------------------------------------------------------------------------------")
+    d =(c < b && b == 2*a)
+    println("Agora utilizaremos os operadores, Or(ou), And(e) e Not(Não)")
+    println("A= $a, B= $b e C= $c")
+    println("A é maior que 1 e B é menor ou igual a 2 ?")
+    println(a > b && b <=2)
+    println("A é maior que 1 ou B é menor ou igual a 2 ")
+    println(a > 1 || b <=2)
+    println("D é o resultado de, C é menor que B e B é igualmente 2xA, então, D é ?")
+    println(d)
+    println("A negação do resultado de D é ?")
+    println(!d)
+}

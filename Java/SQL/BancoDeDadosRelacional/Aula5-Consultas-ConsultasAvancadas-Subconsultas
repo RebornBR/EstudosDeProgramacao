@@ -1,0 +1,51 @@
+INSERT INTO
+ usuarios (nome, email, data_nascimento, rua, numero, cidade, estado) 
+ VALUES 
+ ('Usuario sem reservas', 'semreservar@teste.com', '1990-10-10', 'Rua','123','cidade','estado');
+
+-- Traz apenas os usuario com reservas
+-- ao colocarmos um nome do lado da tabela estamos criando um ALIASES, que é basicamente um apelido para referenciar a tabela, é interressante usar, para evitar confusóes em cololunas de tabelas diferente mas de mesmo nome
+-- aliases criados: us e rs
+
+-- Traz todos os usuario e suas reservas se tiver
+SELECT * FROM usuarios us -- seleciona tudo da tabela de usuarios
+INNER JOIN reservas rs -- vai juntar com a tabela de reservas, em outras palavras, vai trazer os dados de ambas 
+ON us.id = rs.id_usuario; -- tras os dados quando us.id(id de usuario) for igual a rs.id_usuario
+-- PODEMOS ADICIONAR UM COUNT
+-- podemos usar COUNT COM UM JOIN. PARA CONTAR DE ACORDO A UMA CONDIÇÃO, POR EXEMPLO, USUÁRIOS QUE TENHAM RESERVA
+
+-- SELECT COUNT(*) AS total_usuariosComReservas FROM usuarios us INNER JOIN reservas rs ON us.id = rs.id_usuario
+
+INSERT INTO viagens.destinos ( nome, descricao) VALUES 
+('Deestino sem reserva', 'Uma bela praia com areias brancas e mar cristalino')
+
+-- Tras todos os destinos e as reservas se tiverem -- 
+SELECT * FROM reservas rs
+RIGHT JOIN destinos des
+ON des.id = rs.id_destino;
+
+-- Produz o mesmo resultado que a anterior
+SELECT * FROM destinos des
+LEFT JOIN reservas rs
+ON des.id = rs.id_destino;
+
+-- SUb consultas --
+
+-- Usuários que não fizeram nenhuma reserva
+SELECT nome -- PEGA O NOME
+FROM usuarios -- DA TABELA usuarios
+WHERE id NOT IN (SELECT id_usuario FROM reservas); -- RETORNA(apenas o nome, pois é o que selecionamos no select) TUDO QUE A CONDIÇÃO, quando id da tabela usuarios, não estiver(NOT IN) em id_usuario da tabela reservas.
+
+-- Subconsulta para encontrar os destinos menos populares (com menos reservas):
+
+SELECT nome
+FROM destinos
+WHERE id NOT IN (SELECT id_destino FROM reservas) -- -- RETORNA(apenas o nome, pois é o que selecionamos no select) TUDO QUE A CONDIÇÃO, quando id da tabela destinos, não estiver(NOT IN) em id_destinos da tabela reservas
+ORDER BY id; -- ordena por id
+
+-- contagem de reservas por usuario
+
+
+SELECT nome, (SELECT COUNT(*) FROM reservas WHERE id_usuario = usuarios.id) AS total_reservas -- assim que selecionarmos o nome da tabela usuarios
+-- VAMOS SELECIONAR(SELECT) COUNT(*)(contar) na tabela reservas quantos id_usuarios, são iguais aos id da tabela usuarios(usuarios.id) essa contagem será armazenada na coluna chamada(AS) em total_reservas, se não passarmos o nome da coluna, ela ainda será criada e os valores serão salvos, mas terá um nome aleatório.
+FROM usuarios;
