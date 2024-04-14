@@ -2,8 +2,11 @@ package com.alura.ScreenMatch;
 
 import com.alura.ScreenMatch.model.Filme;
 import com.alura.ScreenMatch.model.Serie;
+import com.alura.ScreenMatch.model.Titulo;
 import com.alura.ScreenMatch.model.calculos.CalculadoraTempo;
 import com.alura.ScreenMatch.model.calculos.FiltroRecomendacao;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,6 +50,11 @@ public class Main {
         calcular.calcularTempoNecessario(filme);
         calcular.calcularTempoNecessario(serie);
         System.out.println("Tempo necessário para assistir seus filmes e séries: " + calcular.getTempoTotal());
+        ArrayList<Titulo> listaDeTitulosQueIreiAssistir = new ArrayList<>();
+        listaDeTitulosQueIreiAssistir.add(filme);
+        listaDeTitulosQueIreiAssistir.add(serie);
+        listaDeTitulosQueIreiAssistir.add(meuFilme);
+        System.out.println("\n" + "Lista de titulos que irei assistir: " + "\n" + listaDeTitulosQueIreiAssistir);
 
 
 

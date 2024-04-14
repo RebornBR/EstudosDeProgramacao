@@ -1,5 +1,5 @@
 package com.alura.ScreenMatch.model.calculos;
 
-public interface Classificar {
+public interface Classificavel {
     int getClassificacao();
 }

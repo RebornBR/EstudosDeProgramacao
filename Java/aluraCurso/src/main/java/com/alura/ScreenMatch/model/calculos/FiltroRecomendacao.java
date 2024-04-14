@@ -1,7 +1,7 @@
 package com.alura.ScreenMatch.model.calculos;
 
 public class FiltroRecomendacao {
-    public void filtra(Classificar classificavel) { // recebe um Classificar, ou seja, toda classe que implementar o Classificar, isto é, ela passa a ser tbm um classificar.
+    public void filtra(Classificavel classificavel) { // recebe um Classificavel, ou seja, toda classe que implementar o Classificar, isto é, ela se torna um classificavel.
         if (classificavel.getClassificacao() == 5) {
             System.out.println("Está entre os preferidos do momento");
         } else if (classificavel.getClassificacao() >= 3) {
