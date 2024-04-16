@@ -1,6 +1,8 @@
 package com.alura.ScreenMatch.model;
 
-public class Titulo {
+import com.alura.ScreenMatch.model.calculos.Classificavel;
+
+public class Titulo implements Classificavel, Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -69,4 +71,13 @@ public class Titulo {
         return somaAvaliacoes / qtdAvaliacoes;
     }
 
+    @Override
+    public int getClassificacao() {
+        return (int) mediaAvaliacoes();
+    }
+
+    @Override // esse método é necessário, pois estamos comparando objetos e um objeto tem vários atributos, ou seja, precisamos dizer exatamente por qual atributo eu preciso fazer essa comparacao e ordenar
+    public int compareTo(Titulo outroTitulo) { // metodo do collections.sort() quando o utilizarmos estaremos ordenando nossa lista de Titulos pelo seu nme
+        return this.getNome().compareTo(outroTitulo.getNome()); // comparando o nome de um Titulo com outro Titulo. outroTitulo Pode ser qualquer nome
+    }
 }

@@ -2,7 +2,7 @@ package com.alura.ScreenMatch.model;
 
 import com.alura.ScreenMatch.model.calculos.Classificavel;
 
-public class Filme extends Titulo implements Classificavel { // implementando a interface e utilizando seu método, o seu método é abstrato, ou seja, a classe que a implementar define como o método vai se comportar
+public class Filme extends Titulo { // implementando a interface e utilizando seu método, o seu método é abstrato, ou seja, a classe que a implementar define como o método vai se comportar
     private  String diretor;
 
     public Filme(String nome, int anoDeLancamento) {
@@ -18,7 +18,7 @@ public class Filme extends Titulo implements Classificavel { // implementando a 
     }
 
     @Override // alterando o método existente da nossa classe
-    public int getClassificacao() {// método(abstrato) da Interface Classificavel
+    public int getClassificacao() {// método(abstrato) da Interface Classificavel (que herdamos da classe mae Titulo)
         double nota = mediaAvaliacoes(); // criando a media das avaliações
         return (int) nota/2;
     }
