@@ -5,6 +5,10 @@ import com.alura.ScreenMatch.model.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel { // implementando a interface e utilizando seu método, o seu método é abstrato, ou seja, a classe que a implementar define como o método vai se comportar
     private  String diretor;
 
+    public Filme(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
+
     public String getDiretor() {
         return diretor;
     }
@@ -27,17 +31,7 @@ public class Filme extends Titulo implements Classificavel { // implementando a 
 * */
     @Override // Subistituindo o método existente na nossa classe
     public String toString(){
-        return
-                """
-                Nome Filme: %s
-                Diretor: %s
-                Ano de lançamento: %d
-                Duração: %d minutos
-                Estrelas; %d
-                Quantidade de avaliações: %d
-                """.formatted(getNome(), getDiretor(), getAnoDeLancamento(), getDuracaoEmMinutos(), getClassificacao(), getQtdAvaliacoes())
-                        +
-                        "Incluído no plano: " + getIncluidoNoPlano() ;
+        return getNome() + "("+getAnoDeLancamento()+")";
     }
 
 }

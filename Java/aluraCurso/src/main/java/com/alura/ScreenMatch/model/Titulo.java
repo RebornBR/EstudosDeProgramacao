@@ -8,6 +8,11 @@ public class Titulo {
     private int qtdAvaliacoes;
     private int duracaoEmMinutos;
 
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -60,7 +65,7 @@ public class Titulo {
         somaAvaliacoes+= nota;
         qtdAvaliacoes++;
     }
-    public double mediaAvaliacoes(){
+    protected double mediaAvaliacoes(){
         return somaAvaliacoes / qtdAvaliacoes;
     }
 

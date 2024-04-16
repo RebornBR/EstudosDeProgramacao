@@ -11,9 +11,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         FiltroRecomendacao filtro = new FiltroRecomendacao();
-        Filme filme = new Filme();
-        filme.setNome("Harry Potter e a pedra filosofal");
-        filme.setAnoDeLancamento(2001);
+        Filme filme = new Filme("Harry Potter e a pedra filosofal", 2001);
         filme.setDuracaoEmMinutos(152);
         filme.setDiretor("Chris Columbus");
         filme.setIncluidoNoPlano(true);
@@ -23,9 +21,7 @@ public class Main {
         System.out.println(filme);
         filtro.filtra(filme);
         System.out.println("--------------------------------------------------------------");
-        Serie serie = new Serie();
-        serie.setNome("Saga Of Tanya The Evil");
-        serie.setAnoDeLancamento(2017);
+        Serie serie = new Serie("Saga Of Tanya The Evil", 2017);
         serie.setEpisodiosPorTemporada(12);
         serie.setTemporadas(1);
         serie.setMinutosEpisodio(24);
@@ -35,9 +31,7 @@ public class Main {
         System.out.println(serie);
         filtro.filtra(serie);
         System.out.println("--------------------------------------------------------------");
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.setDiretor("Jkk");
         meuFilme.setDuracaoEmMinutos(180);
         meuFilme.atribuirNota(5);
@@ -54,8 +48,7 @@ public class Main {
         listaDeTitulosQueIreiAssistir.add(filme);
         listaDeTitulosQueIreiAssistir.add(serie);
         listaDeTitulosQueIreiAssistir.add(meuFilme);
-        System.out.println("\n" + "Lista de titulos que irei assistir: " + "\n" + listaDeTitulosQueIreiAssistir);
-
+        System.out.println("\n" + "Lista de titulos que irei assistir: " + listaDeTitulosQueIreiAssistir);
 
 
     }

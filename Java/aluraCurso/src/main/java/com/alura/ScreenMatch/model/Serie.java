@@ -8,6 +8,10 @@ public class Serie extends Titulo implements Classificavel { // implementando a 
     private boolean ativa;
     private int minutosEpisodio;
 
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
+
     public int getTemporadas() {
         return temporadas;
     }
@@ -58,18 +62,6 @@ public class Serie extends Titulo implements Classificavel { // implementando a 
      * */
     @Override // alterando o método existente da nossa classe
     public String toString(){
-        return
-                """
-                Nome Serie: %s
-                Temporadas: %d
-                Episodio por temporada: %d
-                Minutos Episodio: %d
-                Duração: %d minutos
-                Ano de lançamento: %d
-                Estrelas; %d
-                Quantidade de avaliações: %d
-                """.formatted(getNome(),getTemporadas(), getEpisodiosPorTemporada(),getMinutosEpisodio(), getDuracaoEmMinutos(),getAnoDeLancamento(), getClassificacao(), getQtdAvaliacoes())
-                        +
-                        "Incluído no plano: " + getIncluidoNoPlano();
-    }
+        return getNome() + "("+getAnoDeLancamento()+")";
+}
 }
