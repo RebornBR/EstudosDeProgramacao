@@ -1,14 +1,23 @@
 package com.alura.ScreenMatch.model;
 
 import com.alura.ScreenMatch.model.calculos.Classificavel;
+import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Classificavel, Comparable<Titulo> {
+    @SerializedName("Title") // Para conversão de um Json ao nosso objeto Titulo precisamos indicar que o atributo "nome" receberá o atributo "Title" do Json. Podemos utilizar nomes de variaveis em ingles, se forem iguais, sera mapeado automaticamente
     private String nome;
+    @SerializedName("Year") // Para conversão de um Json ao nosso objeto Titulo precisamos indicar que o atributo "anoDeLancamento" receberá o atributo "Year" do Json. Podemos utilizar nomes de variaveis em ingles, se forem iguais, sera mapeado automaticamente
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaAvaliacoes;
     private int qtdAvaliacoes;
     private int duracaoEmMinutos;
+
+    public Titulo(TituloOmdb meuTituloOmdb) {// recebemos um TituloOmdb
+        this.nome = meuTituloOmdb.title();
+        this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year()); // essa conversão é necessária pois sabemos que o json retorna tipos string, podemos resolver isso, fazendo tratamento de excecoes ou modificando nosso código
+        this.duracaoEmMinutos = Integer.parseInt(meuTituloOmdb.runtime().substring(0,3)); // pega os primeiros 3 caracteres
+    }
 
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
@@ -74,6 +83,11 @@ public class Titulo implements Classificavel, Comparable<Titulo> {
     @Override
     public int getClassificacao() {
         return (int) mediaAvaliacoes();
+    }
+
+    @Override
+    public String toString(){
+        return getNome() + "("+getAnoDeLancamento()+")";
     }
 
     @Override // esse método é necessário, pois estamos comparando objetos e um objeto tem vários atributos, ou seja, precisamos dizer exatamente por qual atributo eu preciso fazer essa comparacao e ordenar
