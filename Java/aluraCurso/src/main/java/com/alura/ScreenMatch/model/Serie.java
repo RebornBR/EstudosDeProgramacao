@@ -2,7 +2,7 @@ package com.alura.ScreenMatch.model;
 
 import com.alura.ScreenMatch.model.calculos.Classificavel;
 
-public class Serie extends Titulo { // implementando a interface e utilizando seu método, o seu método é abstrato, ou seja, a classe que a implementar define como o método vai se comportar
+public class Serie extends Titulo {
     private int temporadas;
     private int episodiosPorTemporada;
     private boolean ativa;

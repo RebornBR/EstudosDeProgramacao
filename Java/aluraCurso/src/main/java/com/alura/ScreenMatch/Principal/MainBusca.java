@@ -31,12 +31,12 @@ public class MainBusca {
 
         String json = response.body(); // variavel que recebe o retorno da API( response.body() )
 
-        /**Gson gson = new Gson();
+        /*Gson gson = new Gson();
         Titulo meuTitulo = gson.fromJson(json, Titulo.class); // método do Gson que transforma o json em nossa Titulo class,
         // todos os atributos que pertencem a classe Titulo e tiveres nomes iguais ou que seja Indicado com a @SerializedName, receberão os valores respectivos do Json
         System.out.println(meuTitulo);
         System.out.println("Utilizando metódo getNome: " + meuTitulo.getNome() + " Utilizando metódo getAnoDeLancamento: " + meuTitulo.getAnoDeLancamento());
-         **/
+         */
 
         //Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
         //criando o Gson, mas com todos os atributos, seguindo a formatação de

@@ -2,7 +2,7 @@ package com.alura.ScreenMatch.model;
 
 import com.alura.ScreenMatch.model.calculos.Classificavel;
 
-public class Filme extends Titulo { // implementando a interface e utilizando seu método, o seu método é abstrato, ou seja, a classe que a implementar define como o método vai se comportar
+public class Filme extends Titulo {
     private  String diretor;
 
     public Filme(String nome, int anoDeLancamento) {
