@@ -1,6 +1,7 @@
 package com.alura.ScreenMatch.model;
 
 import com.alura.ScreenMatch.model.calculos.Classificavel;
+import com.alura.ScreenMatch.services.exceptions.ErroDeConversaoDeAnoException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Classificavel, Comparable<Titulo> {
@@ -15,6 +16,12 @@ public class Titulo implements Classificavel, Comparable<Titulo> {
 
     public Titulo(TituloOmdb meuTituloOmdb) {// recebemos um TituloOmdb
         this.nome = meuTituloOmdb.title();
+        this.nome = meuTituloOmdb.title();
+
+        if(meuTituloOmdb.year().length() > 4) {
+            throw new ErroDeConversaoDeAnoException("Não consegui converter o ano " +
+                    "porque tem mais de 04 caracteres.");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year()); // essa conversão é necessária pois sabemos que o json retorna tipos string, podemos resolver isso, fazendo tratamento de excecoes ou modificando nosso código
         this.duracaoEmMinutos = Integer.parseInt(meuTituloOmdb.runtime().substring(0,3)); // pega os primeiros 3 caracteres
     }
