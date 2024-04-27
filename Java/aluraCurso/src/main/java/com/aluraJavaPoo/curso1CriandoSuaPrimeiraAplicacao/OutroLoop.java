@@ -1,4 +1,4 @@
-package com.alura.curso1CriandoSuaPrimeiraAplicacao;
+package com.aluraJavaPoo.curso1CriandoSuaPrimeiraAplicacao;
 
 import java.util.Scanner;
 

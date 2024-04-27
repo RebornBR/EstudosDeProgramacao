@@ -1,6 +1,6 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3.ClassesFilhas;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3.ClassesFilhas;
 
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3.model.Animal;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3.model.Animal;
 
 public class Cachorro extends Animal {
 

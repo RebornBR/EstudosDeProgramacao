@@ -1,4 +1,4 @@
-package com.alura.ScreenMatch.services.exceptions.API;
+package com.aluraJavaPoo.ScreenMatch.services.exceptions.API;
 
 public class OmdbApi {
 }

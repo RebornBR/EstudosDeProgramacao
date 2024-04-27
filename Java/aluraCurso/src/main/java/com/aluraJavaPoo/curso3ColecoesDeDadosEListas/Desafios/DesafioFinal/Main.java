@@ -1,7 +1,7 @@
-package com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal;
+package com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal;
 
-import com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal.Model.CartaoCredito;
-import com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal.Model.Compra;
+import com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal.Model.CartaoCredito;
+import com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal.Model.Compra;
 
 import java.util.Collections;
 import java.util.Scanner;

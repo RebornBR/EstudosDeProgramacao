@@ -1,8 +1,8 @@
-package com.alura.ScreenMatch.Principal;
+package com.aluraJavaPoo.ScreenMatch.Principal;
 
-import com.alura.ScreenMatch.model.Titulo;
-import com.alura.ScreenMatch.model.TituloOmdb;
-import com.alura.ScreenMatch.services.exceptions.ErroDeConversaoDeAnoException;
+import com.aluraJavaPoo.ScreenMatch.model.Titulo;
+import com.aluraJavaPoo.ScreenMatch.model.TituloOmdb;
+import com.aluraJavaPoo.ScreenMatch.services.exceptions.ErroDeConversaoDeAnoException;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

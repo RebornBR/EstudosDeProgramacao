@@ -1,4 +1,4 @@
-package com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio3;
+package com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio3;
 
 import java.util.Scanner;
 

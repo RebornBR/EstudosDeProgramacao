@@ -1,8 +1,8 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioFinal;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioFinal;
 
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioFinal.model.MinhasPreferidas;
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioFinal.model.Musica;
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioFinal.model.Podcast;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioFinal.model.MinhasPreferidas;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioFinal.model.Musica;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioFinal.model.Podcast;
 
 public class Main {
     public static void main(String[] args) {

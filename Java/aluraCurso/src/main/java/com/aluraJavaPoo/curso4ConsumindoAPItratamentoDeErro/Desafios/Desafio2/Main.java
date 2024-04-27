@@ -1,7 +1,7 @@
-package com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio2;
+package com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio2;
 
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio2.model.Livro;
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio2.model.Pessoa;
+import com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio2.model.Livro;
+import com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio2.model.Pessoa;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

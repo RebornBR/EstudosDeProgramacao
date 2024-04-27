@@ -1,6 +1,6 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula4.model;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula4.model;
 
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula4.model.Interfaces.Tabuada;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula4.model.Interfaces.Tabuada;
 
 public class TabuadaMultiplicacao implements Tabuada {
     @Override

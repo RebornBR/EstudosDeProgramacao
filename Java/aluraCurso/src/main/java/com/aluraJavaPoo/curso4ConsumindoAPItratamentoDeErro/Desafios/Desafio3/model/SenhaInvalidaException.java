@@ -1,4 +1,4 @@
-package com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio3.model;
+package com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio3.model;
 
 public class SenhaInvalidaException extends RuntimeException {
 

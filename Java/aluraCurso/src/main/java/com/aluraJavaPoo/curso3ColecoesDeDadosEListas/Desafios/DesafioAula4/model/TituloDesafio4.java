@@ -1,4 +1,4 @@
-package com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioAula4.model;
+package com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioAula4.model;
 
 public class TituloDesafio4 implements Comparable<TituloDesafio4> {
     String nome;

@@ -1,4 +1,4 @@
-package com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioAula3.model;
+package com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioAula3.model;
 
 public class AnimalC3A3 {
     String nome;

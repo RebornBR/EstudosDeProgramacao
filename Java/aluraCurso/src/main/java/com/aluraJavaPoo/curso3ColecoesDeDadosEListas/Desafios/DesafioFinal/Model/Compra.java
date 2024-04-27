@@ -1,4 +1,4 @@
-package com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal.Model;
+package com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal.Model;
 
 public class Compra implements Comparable<Compra> {
     private String descricao;

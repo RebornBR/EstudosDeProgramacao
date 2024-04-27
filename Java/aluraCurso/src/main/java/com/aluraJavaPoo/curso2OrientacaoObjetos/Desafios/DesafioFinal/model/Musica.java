@@ -1,4 +1,4 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioFinal.model;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioFinal.model;
 
 public class Musica extends Audio {
     private String album;

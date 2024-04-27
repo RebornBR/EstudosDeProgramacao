@@ -1,6 +1,6 @@
-package com.alura.ScreenMatch.model;
+package com.aluraJavaPoo.ScreenMatch.model;
 
-import com.alura.ScreenMatch.model.calculos.Classificavel;
+import com.aluraJavaPoo.ScreenMatch.model.calculos.Classificavel;
 
 public class Episodios implements Classificavel {
     private int numero;

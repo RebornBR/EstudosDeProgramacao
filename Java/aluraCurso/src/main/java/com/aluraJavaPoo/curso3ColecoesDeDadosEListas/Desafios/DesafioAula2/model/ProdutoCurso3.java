@@ -1,4 +1,4 @@
-package com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioAula2.model;
+package com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioAula2.model;
 
 public class ProdutoCurso3 {
     String nome;

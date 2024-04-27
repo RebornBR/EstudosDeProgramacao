@@ -1,6 +1,4 @@
-package com.alura.ScreenMatch.model;
-
-import com.alura.ScreenMatch.model.calculos.Classificavel;
+package com.aluraJavaPoo.ScreenMatch.model;
 
 public class Filme extends Titulo {
     private  String diretor;

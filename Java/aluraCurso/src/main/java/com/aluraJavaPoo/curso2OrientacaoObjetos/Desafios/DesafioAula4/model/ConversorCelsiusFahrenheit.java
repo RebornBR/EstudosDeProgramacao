@@ -1,6 +1,6 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula4.model;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula4.model;
 
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula4.model.Interfaces.ConversorTemperatura;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula4.model.Interfaces.ConversorTemperatura;
 
 public class ConversorCelsiusFahrenheit implements ConversorTemperatura {
     @Override

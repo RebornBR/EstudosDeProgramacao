@@ -1,8 +1,4 @@
-package com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio1;
-
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio1.model.CoinGeckoApi;
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio1.model.LivroGoogleApi;
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio1.model.TheMealDbApi;
+package com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio1;
 
 import java.io.IOException;
 import java.util.Scanner;

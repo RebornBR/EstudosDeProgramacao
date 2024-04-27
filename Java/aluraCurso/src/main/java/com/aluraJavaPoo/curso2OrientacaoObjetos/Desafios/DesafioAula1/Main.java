@@ -1,6 +1,6 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula1;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula1;
 
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula1.model.*;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula1.model.*;
 
 public class Main {
     public static void main(String[] args) {

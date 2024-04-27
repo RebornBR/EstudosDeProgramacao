@@ -1,8 +1,8 @@
-package com.alura.ScreenMatch.Principal;
+package com.aluraJavaPoo.ScreenMatch.Principal;
 
-import com.alura.ScreenMatch.model.Filme;
-import com.alura.ScreenMatch.model.Serie;
-import com.alura.ScreenMatch.model.Titulo;
+import com.aluraJavaPoo.ScreenMatch.model.Filme;
+import com.aluraJavaPoo.ScreenMatch.model.Serie;
+import com.aluraJavaPoo.ScreenMatch.model.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;

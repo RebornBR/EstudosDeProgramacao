@@ -1,4 +1,4 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula2.model;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula2.model;
 
 public class Pessoa {
     private int idade;

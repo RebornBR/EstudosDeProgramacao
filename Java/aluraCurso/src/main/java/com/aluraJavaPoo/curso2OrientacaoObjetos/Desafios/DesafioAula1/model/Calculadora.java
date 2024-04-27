@@ -1,4 +1,4 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula1.model;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula1.model;
 
 public class Calculadora {
 

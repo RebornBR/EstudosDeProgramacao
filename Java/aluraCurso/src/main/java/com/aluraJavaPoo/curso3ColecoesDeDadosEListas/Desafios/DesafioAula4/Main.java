@@ -1,6 +1,6 @@
-package com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioAula4;
+package com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioAula4;
 
-import com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioAula4.model.TituloDesafio4;
+import com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioAula4.model.TituloDesafio4;
 
 import java.util.ArrayList;
 import java.util.Collections;

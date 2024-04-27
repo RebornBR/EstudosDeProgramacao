@@ -1,6 +1,6 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula4.model;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula4.model;
 
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula4.model.Interfaces.Vendavel;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula4.model.Interfaces.Vendavel;
 
 public class Servico implements Vendavel {
     private String descricao;

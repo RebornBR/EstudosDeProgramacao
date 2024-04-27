@@ -1,7 +1,7 @@
-package com.alura.ScreenMatch.model;
+package com.aluraJavaPoo.ScreenMatch.model;
 
-import com.alura.ScreenMatch.model.calculos.Classificavel;
-import com.alura.ScreenMatch.services.exceptions.ErroDeConversaoDeAnoException;
+import com.aluraJavaPoo.ScreenMatch.model.calculos.Classificavel;
+import com.aluraJavaPoo.ScreenMatch.services.exceptions.ErroDeConversaoDeAnoException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Classificavel, Comparable<Titulo> {

@@ -1,4 +1,4 @@
-package com.alura.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal.Model;
+package com.aluraJavaPoo.curso3ColecoesDeDadosEListas.Desafios.DesafioFinal.Model;
 
 import java.util.ArrayList;
 import java.util.List;

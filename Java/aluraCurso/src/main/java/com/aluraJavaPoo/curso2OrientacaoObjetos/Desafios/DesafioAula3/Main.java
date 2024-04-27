@@ -1,10 +1,10 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3;
 
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3.ClassesFilhas.Cachorro;
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3.ClassesFilhas.Gato;
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3.ClassesFilhas.ModeloCarro;
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3.model.ContaBancaria;
-import com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3.model.NumerosPrimos;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3.ClassesFilhas.Cachorro;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3.ClassesFilhas.Gato;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3.ClassesFilhas.ModeloCarro;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3.model.ContaBancaria;
+import com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3.model.NumerosPrimos;
 
 public class Main {
     public static void main(String[] args) {

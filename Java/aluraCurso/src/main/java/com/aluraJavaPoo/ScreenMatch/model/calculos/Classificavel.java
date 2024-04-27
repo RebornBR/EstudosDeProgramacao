@@ -1,4 +1,4 @@
-package com.alura.ScreenMatch.model.calculos;
+package com.aluraJavaPoo.ScreenMatch.model.calculos;
 
 public interface Classificavel {
     int getClassificacao();

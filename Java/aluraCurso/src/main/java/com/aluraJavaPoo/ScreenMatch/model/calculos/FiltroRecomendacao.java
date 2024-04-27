@@ -1,4 +1,4 @@
-package com.alura.ScreenMatch.model.calculos;
+package com.aluraJavaPoo.ScreenMatch.model.calculos;
 
 public class FiltroRecomendacao {
     public void filtra(Classificavel classificavel) { // recebe um Classificavel, ou seja, toda classe que implementar o Classificar, isto é, ela se torna um classificavel.

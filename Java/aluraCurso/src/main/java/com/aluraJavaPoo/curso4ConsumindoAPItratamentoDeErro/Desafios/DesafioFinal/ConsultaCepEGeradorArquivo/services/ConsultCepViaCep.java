@@ -1,6 +1,6 @@
-package com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.services;
+package com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.services;
 
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.model.Endereco;
+import com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.model.Endereco;
 import com.google.gson.Gson;
 
 import java.net.URI;

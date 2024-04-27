@@ -1,4 +1,4 @@
-package com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio1.model;
+package com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio1.model;
 
 import java.io.IOException;
 import java.net.URI;

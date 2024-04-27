@@ -1,4 +1,4 @@
-package com.alura.curso1CriandoSuaPrimeiraAplicacao.Desafios;
+package com.aluraJavaPoo.curso1CriandoSuaPrimeiraAplicacao.Desafios;
 
 public class desafioAula2 {
     public static void main(String[] args) {

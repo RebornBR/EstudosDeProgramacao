@@ -1,8 +1,8 @@
-package com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo;
+package com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo;
 
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.model.Endereco;
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.services.ConsultCepViaCep;
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.services.GeradorDeArquivo;
+import com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.model.Endereco;
+import com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.services.ConsultCepViaCep;
+import com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.DesafioFinal.ConsultaCepEGeradorArquivo.services.GeradorDeArquivo;
 
 import java.io.IOException;
 import java.util.Scanner;

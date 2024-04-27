@@ -1,6 +1,6 @@
-package com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio3;
+package com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio3;
 
-import com.alura.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio3.model.SenhaInvalidaException;
+import com.aluraJavaPoo.curso4ConsumindoAPItratamentoDeErro.Desafios.Desafio3.model.SenhaInvalidaException;
 
 import java.util.Scanner;
 

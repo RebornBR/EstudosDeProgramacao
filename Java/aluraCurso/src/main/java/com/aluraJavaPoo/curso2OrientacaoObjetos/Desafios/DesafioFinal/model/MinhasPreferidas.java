@@ -1,4 +1,4 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioFinal.model;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioFinal.model;
 
 public class MinhasPreferidas {
     public void inclui(Audio audio) { // Recebemos um Audio, tudo que extends ou implements um audio, se torna um Audio, logo podemos receber uma musica ou um podcast

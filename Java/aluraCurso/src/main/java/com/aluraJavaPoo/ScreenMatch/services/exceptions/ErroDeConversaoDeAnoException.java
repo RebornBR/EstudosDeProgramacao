@@ -1,4 +1,4 @@
-package com.alura.ScreenMatch.services.exceptions;
+package com.aluraJavaPoo.ScreenMatch.services.exceptions;
 
 public class ErroDeConversaoDeAnoException extends RuntimeException {
     private String mensagem;

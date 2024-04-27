@@ -1,4 +1,4 @@
-package com.alura.curso2OrientacaoObjetos.Desafios.DesafioAula3.model;
+package com.aluraJavaPoo.curso2OrientacaoObjetos.Desafios.DesafioAula3.model;
 
 public class NumerosPrimos {
     private boolean verificarPrimalidade(int numero) {
