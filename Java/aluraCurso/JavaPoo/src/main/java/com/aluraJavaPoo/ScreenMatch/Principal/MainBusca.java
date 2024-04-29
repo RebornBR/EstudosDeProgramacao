@@ -50,7 +50,7 @@ public class MainBusca {
                 String json = response.body();
                 System.out.println(json);
 
-                TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+                TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);// transforma o Json na Record TituloOmdb
                 System.out.println(meuTituloOmdb);
                 //  try {
                 Titulo meuTitulo = new Titulo(meuTituloOmdb);
