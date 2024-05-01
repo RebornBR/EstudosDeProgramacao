@@ -8,6 +8,7 @@ import java.net.http.HttpResponse;
 
 public class ConsumoApi {
 
+    /**Recebemos um endereço de uma api e retornamos o seu response body em uma string nomeada de json**/
     public String obterDados(String endereco) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
