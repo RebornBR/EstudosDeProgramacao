@@ -10,10 +10,7 @@ import br.com.alura.screenmatch.services.ConverteDados;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Principal {
@@ -56,7 +53,7 @@ public class Principal {
 
         List<DadosEpisodio> dadosEpisodios = temporadas.stream()
                 .flatMap(t -> t.episodios().stream())
-                .collect(Collectors.toList()); // podemos usar apenas o toList(), mas será uma lista imutável, ou seja, não será possivel adicionar mais elementos depois
+                .collect(Collectors.toList()); //coletar os elementos da stream em uma coleção ou em outro tipo de dado e esse novo dado será retornado // podemos usar apenas o toList(), mas será uma lista imutável, ou seja, não será possivel adicionar mais elementos depois
 
         System.out.println("\nTop 5 episódios");
         dadosEpisodios.stream() // método stream
@@ -66,6 +63,19 @@ public class Principal {
                 .forEach(System.out::println);
         System.out.println("====================================================================================================================================================================================================================================================");
 
+
+//        System.out.println("\nTop 10 episódios");
+//        dadosEpisodios.stream()
+//                .filter(e -> !e.avaliacao().equalsIgnoreCase("N/A"))// pegamos o episodio(e.avaliação) e verificamos se é igual a "N/A" ignoramos a case, equalsIgnoraCase
+//                .peek(e -> System.out.println("Primeiro filtro(N/A) " +  e)) // exibe oq ocorreu apos a alteração anterior
+//                .sorted(Comparator.comparing(DadosEpisodio::avaliacao).reversed()) // reversed, exibe na ordem decrescente
+//                .peek(e -> System.out.println("Ordenação " +  e)) // exibe oq ocorreu apos a alteração anterior
+//                .limit(10)
+//                .peek(e -> System.out.println("Limite " +  e)) // exibe oq ocorreu apos a alteração anterior
+//                .map(e -> e.titulo().toUpperCase()) // transforma cada elemento da stream em outro tipo de dado e ele sera retornado, ou seja, estamos transformado todos os e.titulo em e.titulo com letras MAIUSCULAS
+//                .peek(e -> System.out.println("Mapeamento " +  e)) // exibe oq ocorreu apos a alteração anterior
+//                .forEach(System.out::println);
+
         System.out.println("Imprimindo com a classe episodio:");
         List<Episodio> episodios = temporadas.stream()/*Stream<DadosTemporada> criamos uma list<Episodio> que recebe o ArrayList temporadas que sera seu temporadas.stream*/
                 .flatMap(t -> t.episodios().stream() // da nossa temporada, pegamos sua list de episodios e fazemos o stream
@@ -73,6 +83,18 @@ public class Principal {
                 .collect(Collectors.toList());  //Agora coletamos a lista criada pelo map; //podemos usar apenas o toList(), mas será uma lista imutável, ou seja, não será possivel adicionar mais elementos depois
         episodios.forEach(System.out::println); // faz um for each de episodios
         System.out.println("====================================================================================================================================================================================================================================================");
+
+//        System.out.println("Digite um trecho do título do episódio");
+//        var trechoTitulo = leitura.nextLine();
+//        Optional<Episodio> episodioBuscado = episodios.stream() // Optional é um container que vai manter os dados, o optional tbm indica que esse container pode ou não ter dados
+//                .filter(e -> e.getTitulo().toUpperCase().contains(trechoTitulo.toUpperCase()))// filtramos para encontrar o titulo que contenha nosso trecho e usamos o toUpperCase tanto no titulo quanto no trecho que queremos, para torna a busca mais acertiva
+//                .findFirst();
+//        if(episodioBuscado.isPresent()){ // verifica se o optional episodioBuscado está presente, se tem, mas podemos usar e é indicado o uso do get
+//            System.out.println("Episódio encontrado!");
+//            System.out.println("Temporada: " + episodioBuscado.get().getTemporada());
+//        } else {
+//            System.out.println("Episódio não encontrado!");
+//        }
 
         System.out.println("A partir de que ano você deseja ver os episódios? ");
         var ano = leitura.nextInt();
@@ -91,5 +113,24 @@ public class Principal {
                 ));
         System.out.println("====================================================================================================================================================================================================================================================");
 
+        System.out.println("Exibindo temporada e sua media de nota com base nos episodios: ");
+        Map<Integer, Double> avaliacoesPorTemporada = episodios.stream()
+                .filter(e -> e.getAvaliacao() > 0.0) // filtramos, ou seja, pegamos apenas as avaliações que forem maiores que 0
+                .collect(Collectors.groupingBy(Episodio::getTemporada, Collectors.averagingDouble(Episodio::getAvaliacao))); // averagingDouble faz a media de episodios pelo getAvaliaçao
+        System.out.println(avaliacoesPorTemporada);
+        System.out.println("====================================================================================================================================================================================================================================================");
+
+        System.out.println("Usando class DoubleSummaryStatistics: ");
+        DoubleSummaryStatistics est = episodios.stream()
+                .filter(e -> e.getAvaliacao() > 0.0)
+                .collect(Collectors.summarizingDouble(Episodio::getAvaliacao));// retorna as estatiticas utilizando o episodio.getAvaliação
+        System.out.println("retornando a DoubleSummaryStatistics est completa ");
+        System.out.println(est);
+        System.out.println("====================================================================================================================================================================================================================================================");
+        System.out.println("retornando a DoubleSummaryStatistics est partes especificas ");
+        System.out.println("Média: " + est.getAverage());
+        System.out.println("Melhor episódio: " + est.getMax());
+        System.out.println("Pior episódio: " + est.getMin());
+        System.out.println("Quantidade: " + est.getCount());
     }
 }
