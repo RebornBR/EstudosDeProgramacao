@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.alura</groupId>
-	<artifactId>screenmatch</artifactId>
+	<artifactId>JavaSpringBoot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>screenmatch</name>
+	<name>JavaSpringBoot</name>
 	<description>Primeiro projeto Spring sem web</description>
 	<properties>
 		<java.version>17</java.version>
