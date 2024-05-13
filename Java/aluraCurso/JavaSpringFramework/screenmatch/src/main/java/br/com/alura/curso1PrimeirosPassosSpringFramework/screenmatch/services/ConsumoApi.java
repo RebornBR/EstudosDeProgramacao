@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.services;
+package br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.services;
 
 import java.io.IOException;
 import java.net.URI;

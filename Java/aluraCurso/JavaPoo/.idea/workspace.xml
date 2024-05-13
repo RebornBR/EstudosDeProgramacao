@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b18eeceb-8ec7-46ae-b20c-fbb5eaa3d30c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aluraJavaPoo/ScreenMatch/Principal/MainBusca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aluraJavaPoo/ScreenMatch/Principal/MainBusca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSpringFramework/screenmatch/src/main/java/br/com/alura/screenmatch/ScreenmatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSpringFramework/screenmatch/src/main/java/br/com/alura/screenmatch/ScreenmatchApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSpringFramework/screenmatch/src/main/java/br/com/alura/screenmatch/services/ConsumoApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSpringFramework/screenmatch/src/main/java/br/com/alura/screenmatch/services/ConsumoApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSpringFramework/screenmatch/src/main/java/br/com/alura/screenmatch/services/ConverteDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaSpringFramework/screenmatch/src/main/java/br/com/alura/screenmatch/services/ConverteDados.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,8 @@
       <workItem from="1714423010395" duration="18000" />
       <workItem from="1714427505760" duration="634000" />
       <workItem from="1714430561866" duration="64000" />
+      <workItem from="1714602612057" duration="27000" />
+      <workItem from="1714602665970" duration="4000" />
     </task>
     <servers />
   </component>

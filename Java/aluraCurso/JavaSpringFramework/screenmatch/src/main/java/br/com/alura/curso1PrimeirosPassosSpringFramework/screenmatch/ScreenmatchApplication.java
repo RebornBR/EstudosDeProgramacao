@@ -1,9 +1,6 @@
-package br.com.alura.screenmatch;
+package br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch;
 
-import br.com.alura.screenmatch.model.DadosSerie;
-import br.com.alura.screenmatch.principal.Principal;
-import br.com.alura.screenmatch.services.ConsumoApi;
-import br.com.alura.screenmatch.services.ConverteDados;
+import br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.principal.Principal;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

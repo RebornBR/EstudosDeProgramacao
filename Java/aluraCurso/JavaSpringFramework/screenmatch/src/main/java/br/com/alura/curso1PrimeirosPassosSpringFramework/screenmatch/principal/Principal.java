@@ -1,11 +1,11 @@
-package br.com.alura.screenmatch.principal;
+package br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.principal;
 
-import br.com.alura.screenmatch.model.DadosEpisodio;
-import br.com.alura.screenmatch.model.DadosSerie;
-import br.com.alura.screenmatch.model.DadosTemporada;
-import br.com.alura.screenmatch.model.Episodio;
-import br.com.alura.screenmatch.services.ConsumoApi;
-import br.com.alura.screenmatch.services.ConverteDados;
+import br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.model.DadosEpisodio;
+import br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.model.DadosSerie;
+import br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.model.DadosTemporada;
+import br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.model.Episodio;
+import br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.services.ConsumoApi;
+import br.com.alura.curso1PrimeirosPassosSpringFramework.screenmatch.services.ConverteDados;
 
 import java.io.IOException;
 import java.time.LocalDate;
